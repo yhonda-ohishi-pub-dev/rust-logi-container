@@ -16,7 +16,7 @@ const e = workerEnv as unknown as Env;
 
 export class RustLogiContainer extends Container<Env> {
   defaultPort = 8080;
-  sleepAfter = "15m";
+  sleepAfter = "1m";
   envVars = {
     SERVER_PORT: "8080",
     SERVER_HOST: "0.0.0.0",
