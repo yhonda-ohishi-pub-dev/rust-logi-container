@@ -10,7 +10,7 @@ R2_ACCOUNT_ID = "24b45709d060d957340180e995f0d373"
 
 [[containers]]
 class_name = "RustLogiContainer"
-image = "../Dockerfile"
+image = "/home/yhonda/rust/rust-logi/Dockerfile"
 max_instances = 3
 instance_type = "basic"
 
