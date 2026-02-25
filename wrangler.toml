@@ -1,0 +1,27 @@
+name = "rust-logi-container"
+main = "src/index.ts"
+compatibility_date = "2026-02-25"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+STORAGE_BACKEND = "r2"
+R2_BUCKET = "rust-logi-files"
+R2_ACCOUNT_ID = "24b45709d060d957340180e995f0d373"
+
+[[containers]]
+class_name = "RustLogiContainer"
+image = "../Dockerfile"
+max_instances = 3
+instance_type = "basic"
+
+[[durable_objects.bindings]]
+class_name = "RustLogiContainer"
+name = "RUST_LOGI"
+
+[[migrations]]
+new_sqlite_classes = ["RustLogiContainer"]
+tag = "v1"
+
+[[routes]]
+pattern = "api-container.mtamaramu.com"
+custom_domain = true
