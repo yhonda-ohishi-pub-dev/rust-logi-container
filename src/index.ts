@@ -10,6 +10,10 @@ interface Env {
   R2_ACCOUNT_ID: string;
   R2_ACCESS_KEY: string;
   R2_SECRET_KEY: string;
+  FLICKR_CONSUMER_KEY: string;
+  FLICKR_CONSUMER_SECRET: string;
+  CAM_DIGEST_USER: string;
+  CAM_DIGEST_PASS: string;
 }
 
 const e = workerEnv as unknown as Env;
@@ -30,10 +34,10 @@ export class RustLogiContainer extends Container<Env> {
     DVR_NOTIFICATION_ENABLED: "true",
     DVR_LINEWORKS_BOT_URL: "https://lineworks-bot-rust-566bls5vfq-an.a.run.app",
     GOOGLE_CLIENT_ID: "747065218280-9httjrj60r8phntvba226vcr1m6u95tg.apps.googleusercontent.com",
-    FLICKR_CONSUMER_KEY: "ce52fba1099524b9eb0fb0b1913547b5",
-    FLICKR_CONSUMER_SECRET: "74de269c7d0b550f",
-    CAM_DIGEST_USER: "admin",
-    CAM_DIGEST_PASS: "Ohishi55",
+    FLICKR_CONSUMER_KEY: e.FLICKR_CONSUMER_KEY,
+    FLICKR_CONSUMER_SECRET: e.FLICKR_CONSUMER_SECRET,
+    CAM_DIGEST_USER: e.CAM_DIGEST_USER,
+    CAM_DIGEST_PASS: e.CAM_DIGEST_PASS,
     CAM_MACHINE_NAME: "TS-NA230WP-48",
     CAM_SDCARD_CGI: "https://car.mtamaramu.com/camera-cgi/admin/sdcard.cgi?action=generate&pagesize=1000&pagenum=1&dir=",
     CAM_MP4_CGI: "https://car.mtamaramu.com/playmp4.cgi?storage=sd&file=/",
